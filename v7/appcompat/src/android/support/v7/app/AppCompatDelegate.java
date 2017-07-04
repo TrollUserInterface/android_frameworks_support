@@ -91,7 +91,7 @@ public abstract class AppCompatDelegate {
     static final String TAG = "AppCompatDelegate";
 
     /**
-     * Mode which means to not use night mode, and therefore prefer {@code notnight} qualified
+     * Mode which means to always use day mode (Material.Light theme), and therefore prefer {@code notnight} qualified
      * resources where available, regardless of the time.
      *
      * @see #setLocalNightMode(int)
@@ -99,12 +99,100 @@ public abstract class AppCompatDelegate {
     public static final int MODE_NIGHT_NO = 1;
 
     /**
-     * Mode which means to always use night mode, and therefore prefer {@code night} qualified
+     * Mode which means to always use night mode (Material theme), and therefore prefer {@code night} qualified
      * resources where available, regardless of the time.
      *
      * @see #setLocalNightMode(int)
      */
     public static final int MODE_NIGHT_YES = 2;
+
+    /**
+     * Mode which means to always use night mode (Pink theme), and therefore prefer {@code pink} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_PINK = 3;
+
+    /**
+     * Mode which means to always use day mode (Ambar theme), and therefore prefer {@code ambar} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_AMBAR = 4;
+
+    /**
+     * Mode which means to always use night mode (Red theme), and therefore prefer {@code red} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_RED = 5;
+
+    /**
+     * Mode which means to always use night mode (Green theme), and therefore prefer {@code green} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_GREEN = 6;
+
+    /**
+     * Mode which means to always use day mode (Aqua theme), and therefore prefer {@code aqua} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_AQUA = 7;
+
+    /**
+     * Mode which means to always use night mode (White theme), and therefore prefer {@code white} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_YES_WHITE = 8;
+
+    /**
+     * Mode which means to always use night mode (WhitePink theme), and therefore prefer {@code whitepink} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_NO_WHITEPINK = 9;
+
+    /**
+     * Mode which means to always use night mode (WhiteAmbar theme), and therefore prefer {@code whiteambar} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_NO_WHITEAMBAR = 10;
+	
+    /**
+     * Mode which means to always use night mode (WhiteRed theme), and therefore prefer {@code whitered} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_NO_WHITERED = 11;
+	
+    /**
+     * Mode which means to always use night mode (WhiteGreen theme), and therefore prefer {@code whitegreen} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_NO_WHITEGREEN = 12;
+	
+    /**
+     * Mode which means to always use night mode (WhiteAqua theme), and therefore prefer {@code whiteaqua} qualified
+     * resources where available, regardless of the time.
+     *
+     * @see #setLocalNightMode(int)
+     */
+    public static final int MODE_NIGHT_NO_WHITEAQUA = 13;
 
     /**
      * Mode which means to use night mode when it is determined that it is night or not.
@@ -134,12 +222,17 @@ public abstract class AppCompatDelegate {
 
     /** @hide */
     @RestrictTo(GROUP_ID)
-    @IntDef({MODE_NIGHT_NO, MODE_NIGHT_YES, MODE_NIGHT_AUTO, MODE_NIGHT_FOLLOW_SYSTEM,
-            MODE_NIGHT_UNSPECIFIED})
+    @IntDef({MODE_NIGHT_NO, MODE_NIGHT_YES, MODE_NIGHT_YES_PINK, MODE_NIGHT_YES_AMBAR,
+            MODE_NIGHT_YES_RED, MODE_NIGHT_YES_GREEN, MODE_NIGHT_YES_AQUA, MODE_NIGHT_YES_WHITE,
+            MODE_NIGHT_NO_WHITEPINK, MODE_NIGHT_NO_WHITEAMBAR, MODE_NIGHT_NO_WHITERED, MODE_NIGHT_NO_WHITEGREEN,
+            MODE_NIGHT_NO_WHITEAQUA, MODE_NIGHT_AUTO, MODE_NIGHT_FOLLOW_SYSTEM, MODE_NIGHT_UNSPECIFIED})
     @Retention(RetentionPolicy.SOURCE)
     public @interface NightMode {}
 
-    @IntDef({MODE_NIGHT_NO, MODE_NIGHT_YES, MODE_NIGHT_FOLLOW_SYSTEM})
+    @IntDef({MODE_NIGHT_NO, MODE_NIGHT_YES, MODE_NIGHT_YES_PINK, MODE_NIGHT_YES_AMBAR,
+            MODE_NIGHT_YES_RED, MODE_NIGHT_YES_GREEN, MODE_NIGHT_YES_AQUA,
+            MODE_NIGHT_YES_WHITE, MODE_NIGHT_NO_WHITEPINK, MODE_NIGHT_NO_WHITEAMBAR,
+            MODE_NIGHT_NO_WHITERED, MODE_NIGHT_NO_WHITEGREEN, MODE_NIGHT_NO_WHITEAQUA, MODE_NIGHT_FOLLOW_SYSTEM})
     @Retention(RetentionPolicy.SOURCE)
     @interface ApplyableNightMode {}
 
@@ -473,6 +566,17 @@ public abstract class AppCompatDelegate {
             case MODE_NIGHT_AUTO:
             case MODE_NIGHT_NO:
             case MODE_NIGHT_YES:
+            case MODE_NIGHT_YES_PINK:
+            case MODE_NIGHT_YES_AMBAR:
+            case MODE_NIGHT_YES_RED:
+            case MODE_NIGHT_YES_GREEN:
+            case MODE_NIGHT_YES_AQUA:
+            case MODE_NIGHT_YES_WHITE:
+            case MODE_NIGHT_NO_WHITEPINK:
+            case MODE_NIGHT_NO_WHITEAMBAR:
+            case MODE_NIGHT_NO_WHITERED:
+            case MODE_NIGHT_NO_WHITEGREEN:
+            case MODE_NIGHT_NO_WHITEAQUA:
             case MODE_NIGHT_FOLLOW_SYSTEM:
                 sDefaultNightMode = mode;
                 break;
