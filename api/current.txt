@@ -7845,16 +7845,18 @@ package android.support.v7.app {
     field public static final int MODE_NIGHT_NO = 1; // 0x1
     field public static final int MODE_NIGHT_YES = 2; // 0x2
     field public static final int MODE_NIGHT_YES_PINK = 3; // 0x3
-    field public static final int MODE_NIGHT_YES_AMBAR = 4; // 0x4
+    field public static final int MODE_NIGHT_YES_AMBER = 4; // 0x4
     field public static final int MODE_NIGHT_YES_RED = 5; // 0x5
-    field public static final int MODE_NIGHT_YES_GREEN = 6; // 0x6
+    field public static final int MODE_NIGHT_YES_TEAL = 6; // 0x6
     field public static final int MODE_NIGHT_YES_AQUA = 7; // 0x7
-    field public static final int MODE_NIGHT_YES_WHITE = 8; // 0x8
-    field public static final int MODE_NIGHT_NO_WHITEPINK = 9; // 0x9
-    field public static final int MODE_NIGHT_NO_WHITEAMBAR = 10; // 0xa
-    field public static final int MODE_NIGHT_NO_WHITERED = 11; // 0xb
-    field public static final int MODE_NIGHT_NO_WHITEGREEN = 12; // 0xc
-    field public static final int MODE_NIGHT_NO_WHITEAQUA = 13; // 0xd
+    field public static final int MODE_NIGHT_NO_WHITEPINK = 8; // 0x8
+    field public static final int MODE_NIGHT_NO_WHITEAMBER = 9; // 0x9
+    field public static final int MODE_NIGHT_NO_WHITERED = 10; // 0xa
+    field public static final int MODE_NIGHT_NO_WHITETEAL = 11; // 0xb
+    field public static final int MODE_NIGHT_NO_WHITEAQUA = 12; // 0xc
+
+    field public static final int MODE_NIGHT_YES_PURPLE = 13; // 0xd
+    field public static final int MODE_NIGHT_NO_WHITEPURPLE = 14; // 0xe
   }
 
   public class AppCompatDialog extends android.app.Dialog implements android.support.v7.app.AppCompatCallback {

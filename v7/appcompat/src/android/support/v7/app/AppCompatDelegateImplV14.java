@@ -128,16 +128,19 @@ class AppCompatDelegateImplV14 extends AppCompatDelegateImplV11 {
             case MODE_NIGHT_NO:
             case MODE_NIGHT_YES:
             case MODE_NIGHT_YES_PINK:
-            case MODE_NIGHT_YES_AMBAR:
+            case MODE_NIGHT_YES_AMBER:
             case MODE_NIGHT_YES_RED:
-            case MODE_NIGHT_YES_GREEN:
+            case MODE_NIGHT_YES_TEAL:
             case MODE_NIGHT_YES_AQUA:
-            case MODE_NIGHT_YES_WHITE:
             case MODE_NIGHT_NO_WHITEPINK:
-            case MODE_NIGHT_NO_WHITEAMBAR:
+            case MODE_NIGHT_NO_WHITEAMBER:
             case MODE_NIGHT_NO_WHITERED:
-            case MODE_NIGHT_NO_WHITEGREEN:
+            case MODE_NIGHT_NO_WHITETEAL:
             case MODE_NIGHT_NO_WHITEAQUA:
+
+            case MODE_NIGHT_YES_PURPLE:
+            case MODE_NIGHT_NO_WHITEPURPLE:
+
             case MODE_NIGHT_FOLLOW_SYSTEM:
                 if (mLocalNightMode != mode) {
                     mLocalNightMode = mode;
@@ -214,35 +217,38 @@ class AppCompatDelegateImplV14 extends AppCompatDelegateImplV11 {
             case MODE_NIGHT_YES_PINK:
                 newNightMode = Configuration.UI_MODE_NIGHT_YES_PINK;
                 break;
-            case MODE_NIGHT_YES_AMBAR:
-                newNightMode = Configuration.UI_MODE_NIGHT_YES_AMBAR;
+            case MODE_NIGHT_YES_AMBER:
+                newNightMode = Configuration.UI_MODE_NIGHT_YES_AMBER;
                 break;
             case MODE_NIGHT_YES_RED:
                 newNightMode = Configuration.UI_MODE_NIGHT_YES_RED;
                 break;
-            case MODE_NIGHT_YES_GREEN:
-                newNightMode = Configuration.UI_MODE_NIGHT_YES_GREEN;
+            case MODE_NIGHT_YES_TEAL:
+                newNightMode = Configuration.UI_MODE_NIGHT_YES_TEAL;
                 break;
             case MODE_NIGHT_YES_AQUA:
                 newNightMode = Configuration.UI_MODE_NIGHT_YES_AQUA;
                 break;
-            case MODE_NIGHT_YES_WHITE:
-                newNightMode = Configuration.UI_MODE_NIGHT_YES_WHITE;
-                break;
             case MODE_NIGHT_NO_WHITEPINK:
                 newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEPINK;
                 break;
-            case MODE_NIGHT_NO_WHITEAMBAR:
-                newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEAMBAR;
+            case MODE_NIGHT_NO_WHITEAMBER:
+                newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEAMBER;
                 break;
             case MODE_NIGHT_NO_WHITERED:
                 newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITERED;
                 break;
-            case MODE_NIGHT_NO_WHITEGREEN:
-                newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEGREEN;
+            case MODE_NIGHT_NO_WHITETEAL:
+                newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITETEAL;
                 break;
             case MODE_NIGHT_NO_WHITEAQUA:
                 newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEAQUA;
+                break;
+            case MODE_NIGHT_YES_PURPLE:
+                newNightMode = Configuration.UI_MODE_NIGHT_YES_PURPLE;
+                break;
+            case MODE_NIGHT_NO_WHITEPURPLE:
+                newNightMode = Configuration.UI_MODE_NIGHT_NO_WHITEPURPLE;
                 break;
         }
 
